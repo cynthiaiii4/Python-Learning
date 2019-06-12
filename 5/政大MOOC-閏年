@@ -1,0 +1,22 @@
+"""
+請定義一個函式，讀進一個年份，輸出是不是閏年。
+
+提示：
+目前使用的格里高利曆閏年規則如下：
+
+4的倍數是可能的。
+100的倍數是不可能的。
+400的倍數是可能的。
+"""
+
+import numpy as np
+import pandas as pd
+
+def leapyear(x):
+    x = int(input("請輸入年份判斷"))
+    if( x % 4 == 0 and x % 100!=0)or(x % 400 == 0 and x % 100!=0):
+        print("是閏年")
+    else:
+        print("不是閏年")
+        
+leapyear(answer)
