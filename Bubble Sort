@@ -1,0 +1,24 @@
+import numpy as np
+import pandas as pd
+
+mylist = [20, 9, 100, 0, 55, 3 ,11]
+
+def bubble_sort(list):
+    for i in range(0, len(list)-1):
+        for j in range(0,len(list)-1-i):
+            if list[j]>list[j+1]:
+                list[j],list[j+1] = list[j+1],list[j]
+        print("run",i+1,":",list)    
+bubble_sort(mylist)
+
+def bubble_sort_flag(list):
+    for i in range(0, len(list)-1):
+        flag = False
+        for j in range(0,len(list)-1-i):
+            if list[j]>list[j+1]:
+                flag = True
+                list[j],list[j+1] = list[j+1],list[j]
+        if flag == False:
+            break
+        print("run",i+1,":",list)   
+bubble_sort_flag(mylist)
